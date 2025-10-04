@@ -1,0 +1,333 @@
+/* --- Global Styles --- */
+:root {
+    --primary-color: #FF5733; /* Chili Red/Orange */
+    --secondary-color: #333333; /* Deep Charcoal */
+    --accent-color: #FFC300; /* Egg Yolk Gold/Yellow */
+    --light-bg: #F8F8F8;
+    --dark-text: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text);
+    line-height: 1.6;
+    background-color: white;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.5rem; }
+
+section {
+    padding: 60px 5%;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #E04E2B; 
+}
+
+/* --- Header/Navbar --- */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--primary-color);
+}
+
+.nav-cta {
+    display: none; /* Hide on desktop, show on mobile */
+}
+
+/* --- Hero Section --- */
+.hero {
+    /* Placeholder for a delicious food image */
+    background: url('hero-food-image-placeholder.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+    padding: 30px;
+    border-radius: 8px;
+    margin-left: 5%;
+    max-width: 600px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 4rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+/* --- Features Section --- */
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--light-bg);
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.feature-card {
+    flex: 1;
+    max-width: 300px;
+}
+
+.feature-card h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Details Section (Our Snack) --- */
+.details-section {
+    background-color: white;
+    text-align: center;
+}
+
+.snack-breakdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.snack-item {
+    flex: 1;
+    padding: 20px;
+    border-left: 4px solid var(--accent-color);
+    background-color: var(--light-bg);
+    border-radius: 5px;
+}
+
+.serving-options {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.serving-options h3 {
+    color: var(--accent-color);
+}
+
+.serving-options ul {
+    list-style-type: '🔥 ';
+    padding-left: 20px;
+}
+.serving-options li {
+    margin-bottom: 10px;
+}
+
+/* --- Locations Section --- */
+.locations-section {
+    text-align: center;
+    background-color: var(--light-bg);
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.delivery-options {
+    margin-bottom: 30px;
+}
+
+.delivery-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.partner-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.partner-link:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-text);
+}
+
+.location-list {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background-color: white;
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input, 
+#contact-form textarea, 
+#contact-form select {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px 5%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    /* In a real site, you'd use SVG icons or sprites */
+    background-color: var(--primary-color); 
+    border-radius: 50%;
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 768px) {
+    .navbar nav {
+        display: none; /* Hide main navigation */
+    }
+
+    .nav-cta {
+        display: block; /* Show CTA button */
+    }
+
+    .hero {
+        height: 60vh;
+        background-position: 80% center;
+    }
+
+    .hero-content {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .snack-breakdown {
+        flex-direction: column;
+    }
+
+    .delivery-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
